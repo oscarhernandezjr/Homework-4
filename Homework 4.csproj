@@ -11,7 +11,4 @@
   <ItemGroup>
     <None Remove="LinkedList\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LinkedList\" />
-  </ItemGroup>
 </Project>

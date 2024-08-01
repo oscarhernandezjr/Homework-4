@@ -2,7 +2,7 @@
 
 using Homework_4.LinkedList;
 
-LinkedList LinkedList = new LinkedList();
+DoublyLinkedList LinkedList = new DoublyLinkedList();
 LinkedList.InsertFirst(1);
 LinkedList.InsertFirst(2);
 LinkedList.InsertFirst(3);

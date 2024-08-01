@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Homework_4.LinkedList
 {
-    public class LinkedList
+    public class DoublyLinkedList
     {
         public Node First { get; set; }
         public Node Last { get; set; }
@@ -14,6 +14,7 @@ namespace Homework_4.LinkedList
             newNode.Data = data;
             // Put the old node into Next
             newNode.Next = First;
+            if (First != null) First.Previous = newNode;
             // Make the first the new node
             First = newNode;
 
@@ -26,6 +27,7 @@ namespace Homework_4.LinkedList
             Node temp = First;
             // Assign the new head
             First = First.Next;
+            if (First != null) First.Previous = null;
             if (First == null) Last = null;
             return temp;
         }
@@ -47,6 +49,7 @@ namespace Homework_4.LinkedList
             Node newNode = new Node();
             newNode.Data = data;
             currentLastNode.Next = newNode;
+            newNode.Previous = currentLastNode;
             Last = newNode;
         }
     }
